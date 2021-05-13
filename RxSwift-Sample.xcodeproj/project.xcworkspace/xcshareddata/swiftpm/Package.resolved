@@ -1,0 +1,79 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CwlCatchException",
+        "repositoryURL": "https://github.com/mattgallagher/CwlCatchException.git",
+        "state": {
+          "branch": null,
+          "revision": "f809deb30dc5c9d9b78c872e553261a61177721a",
+          "version": "2.0.0"
+        }
+      },
+      {
+        "package": "CwlPreconditionTesting",
+        "repositoryURL": "https://github.com/mattgallagher/CwlPreconditionTesting.git",
+        "state": {
+          "branch": null,
+          "revision": "02b7a39a99c4da27abe03cab2053a9034379639f",
+          "version": "2.0.0"
+        }
+      },
+      {
+        "package": "Nimble",
+        "repositoryURL": "https://github.com/Quick/Nimble.git",
+        "state": {
+          "branch": null,
+          "revision": "d258c638d9ef214723a857a23f4113773aad28fb",
+          "version": "9.1.0"
+        }
+      },
+      {
+        "package": "NSObject-Rx",
+        "repositoryURL": "https://github.com/RxSwiftCommunity/NSObject-Rx.git",
+        "state": {
+          "branch": null,
+          "revision": "9d1967fb5f501f77d2ecfeb4f569a5f65a69a33c",
+          "version": "5.2.1"
+        }
+      },
+      {
+        "package": "Quick",
+        "repositoryURL": "https://github.com/Quick/Quick.git",
+        "state": {
+          "branch": null,
+          "revision": "8cce6acd38f965f5baa3167b939f86500314022b",
+          "version": "3.1.2"
+        }
+      },
+      {
+        "package": "RxGesture",
+        "repositoryURL": "https://github.com/RxSwiftCommunity/RxGesture.git",
+        "state": {
+          "branch": null,
+          "revision": "e29e65a58c2f670677d17df9a18e846b87e78592",
+          "version": "4.0.2"
+        }
+      },
+      {
+        "package": "RxOptional",
+        "repositoryURL": "https://github.com/RxSwiftCommunity/RxOptional.git",
+        "state": {
+          "branch": null,
+          "revision": "52f467e628f4338a0b1f2deff60df8be1b9a6647",
+          "version": "5.0.3"
+        }
+      },
+      {
+        "package": "RxSwift",
+        "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "7c17a6ccca06b5c107cfa4284e634562ddaf5951",
+          "version": "6.2.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
