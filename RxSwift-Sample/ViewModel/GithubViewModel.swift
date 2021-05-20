@@ -14,6 +14,7 @@ protocol GithubViewModelInput {
 protocol GithubViewModelOutput {
     var changeModelsObservable: Observable<Void> { get }
     var models: [GithubModel] { get }
+    var modelsObservable: Observable<[GithubModel]> { get }
 }
 
 final class GithubViewModel: GithubViewModelInput, GithubViewModelOutput, HasDisposeBag {
@@ -40,6 +41,8 @@ final class GithubViewModel: GithubViewModelInput, GithubViewModelOutput, HasDis
     private let _changeModelsObservable = PublishRelay<Void>()
     // Observableを代入し変数changeModelsObservableを初期化する
     lazy var changeModelsObservable = _changeModelsObservable.asObservable()
+    private let _modelsObservable = PublishRelay<[GithubModel]>()
+    lazy var modelsObservable = _modelsObservable.asObservable()
     
     // 最後に取得したデータ
     var models: [GithubModel] = []
@@ -63,6 +66,8 @@ final class GithubViewModel: GithubViewModelInput, GithubViewModelOutput, HasDis
             .flatMapLatest({ (searchWord, sortType) -> Observable<[GithubModel]> in
                 GithubAPI.shared.rx.get(searchWord: searchWord, isDesc: sortType)
                 
+            }).bind(to: _modelsObservable).disposed(by: disposeBag)
+        
         // map:
         // Observableのイベントの要素を別の値に変換する(ここではModelにしている？)
         // 用途:
