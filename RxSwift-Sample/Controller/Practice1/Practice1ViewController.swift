@@ -60,6 +60,12 @@ final class Practice1ViewController: UIViewController {
             cell.configure(githubModel: element)
             
         }.disposed(by: disposeBag)
+        
+        tableView.rx.modelSelected(GithubModel.self).subscribe {[weak self] githubModel in
+            guard let self = self else { return }
+            guard let githubModel = githubModel.element else { return }
+            Router.showWeb(from: self, url: URL(string: githubModel.htmlUrl)!)
+        }.disposed(by: disposeBag)
     }
     
 }
