@@ -36,8 +36,8 @@ final class GithubViewModel: GithubViewModelInput, GithubViewModelOutput, HasDis
     // outputについての記述
     // 出力側の定型文
     // 結果をVCに返すのでObservableを使用する
-    // Observableを代入し変数changeModelsObservableを初期化する
     private let _modelsObservable = PublishRelay<[GithubModel]>()
+    // Observableを代入し変数modelsObservableを初期化する
     lazy var modelsObservable = _modelsObservable.asObservable()
     
     // 初期化時
