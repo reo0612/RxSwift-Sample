@@ -25,9 +25,10 @@ final class Router {
         from.navigationController?.pushViewController(trial3, animated: true)
     }
     
-    static func showPractice(from: UIViewController) {
-        let practice = UIStoryboard.practice
-        from.navigationController?.pushViewController(practice, animated: true)
+    static func showPractice1(from: UIViewController) {
+        let practice1 = UIStoryboard.practice1
+        from.navigationController?.pushViewController(practice1, animated: true)
+    }
     }
     
     static func showWeb(from: UIViewController, url: URL) {

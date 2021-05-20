@@ -48,7 +48,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="実践1"/>
                                         <connections>
-                                            <action selector="showPractice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EdI-EH-En4"/>
+                                            <action selector="showPractice1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lJM-dE-Pdf"/>
                                         </connections>
                                     </button>
                                 </subviews>

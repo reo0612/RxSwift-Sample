@@ -4,7 +4,7 @@ import RxSwift
 import RxCocoa
 import RxOptional
 
-final class PracticeViewController: UIViewController {
+final class Practice1ViewController: UIViewController {
 
     @IBOutlet weak private var nameTextField: UITextField!
     @IBOutlet weak private var tableView: UITableView! {

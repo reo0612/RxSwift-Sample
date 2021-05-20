@@ -18,7 +18,8 @@ extension UIStoryboard {
         UIStoryboard(name: "Trial3", bundle: nil).instantiateInitialViewController() as! Trial3ViewController
     }
     
-    static var practice: PracticeViewController {
-        UIStoryboard(name: "Practice", bundle: nil).instantiateInitialViewController() as! PracticeViewController
+    static var practice1: Practice1ViewController {
+        UIStoryboard(name: "Practice1", bundle: nil).instantiateInitialViewController() as! Practice1ViewController
+    }
     }
 }

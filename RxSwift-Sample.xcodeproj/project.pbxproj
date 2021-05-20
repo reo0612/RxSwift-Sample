@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		835371BD2646A1140052EF6A /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835371BC2646A1140052EF6A /* PracticeViewController.swift */; };
-		835371BF2646A1200052EF6A /* Practice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835371BE2646A1200052EF6A /* Practice.storyboard */; };
+		835371BD2646A1140052EF6A /* Practice1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835371BC2646A1140052EF6A /* Practice1ViewController.swift */; };
+		835371BF2646A1200052EF6A /* Practice1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835371BE2646A1200052EF6A /* Practice1.storyboard */; };
 		835371C926476DB70052EF6A /* GithubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835371C726476DB70052EF6A /* GithubTableViewCell.swift */; };
 		835371CA26476DB70052EF6A /* GithubTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 835371C826476DB70052EF6A /* GithubTableViewCell.xib */; };
 		835371CC264771FC0052EF6A /* GithubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835371CB264771FC0052EF6A /* GithubModel.swift */; };
@@ -55,8 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		835371BC2646A1140052EF6A /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
-		835371BE2646A1200052EF6A /* Practice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Practice.storyboard; sourceTree = "<group>"; };
+		835371BC2646A1140052EF6A /* Practice1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice1ViewController.swift; sourceTree = "<group>"; };
+		835371BE2646A1200052EF6A /* Practice1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Practice1.storyboard; sourceTree = "<group>"; };
 		835371C726476DB70052EF6A /* GithubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubTableViewCell.swift; sourceTree = "<group>"; };
 		835371C826476DB70052EF6A /* GithubTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GithubTableViewCell.xib; sourceTree = "<group>"; };
 		835371CB264771FC0052EF6A /* GithubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubModel.swift; sourceTree = "<group>"; };
@@ -116,13 +116,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		835371BB2646A1000052EF6A /* Practice */ = {
+		835371BB2646A1000052EF6A /* Practice1 */ = {
 			isa = PBXGroup;
 			children = (
-				835371BC2646A1140052EF6A /* PracticeViewController.swift */,
-				835371BE2646A1200052EF6A /* Practice.storyboard */,
+				835371BC2646A1140052EF6A /* Practice1ViewController.swift */,
+				835371BE2646A1200052EF6A /* Practice1.storyboard */,
 			);
-			path = Practice;
+			path = Practice1;
 			sourceTree = "<group>";
 		};
 		835371C0264767A30052EF6A /* ViewModel */ = {
@@ -227,7 +227,7 @@
 		8385E7D22646508B0058B19D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				835371BB2646A1000052EF6A /* Practice */,
+				835371BB2646A1000052EF6A /* Practice1 */,
 				835371D72647E2750052EF6A /* Trial3 */,
 				8385E7DF264685DE0058B19D /* Trial2 */,
 				8385E7D4264650A40058B19D /* Trial1 */,
@@ -396,7 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8385E7AA26464EF60058B19D /* LaunchScreen.storyboard in Resources */,
-				835371BF2646A1200052EF6A /* Practice.storyboard in Resources */,
+				835371BF2646A1200052EF6A /* Practice1.storyboard in Resources */,
 				8385E7A726464EF60058B19D /* Assets.xcassets in Resources */,
 				835371CA26476DB70052EF6A /* GithubTableViewCell.xib in Resources */,
 				8385E7A526464EF30058B19D /* Main.storyboard in Resources */,
@@ -439,7 +439,7 @@
 				8385E7E1264685EF0058B19D /* Trial2ViewController.swift in Sources */,
 				8385E79E26464EF30058B19D /* AppDelegate.swift in Sources */,
 				835371D32647D10B0052EF6A /* GithubAPI.swift in Sources */,
-				835371BD2646A1140052EF6A /* PracticeViewController.swift in Sources */,
+				835371BD2646A1140052EF6A /* Practice1ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

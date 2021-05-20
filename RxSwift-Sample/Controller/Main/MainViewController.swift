@@ -20,7 +20,7 @@ final class MainViewController: UIViewController {
         Router.showTrial3(from: self)
     }
     
-    @IBAction private func showPractice(_ sender: UIButton) {
-        Router.showPractice(from: self)
+    @IBAction private func showPractice1(_ sender: UIButton) {
+        Router.showPractice1(from: self)
     }
 }
