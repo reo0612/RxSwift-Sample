@@ -55,6 +55,9 @@ final class Practice1ViewController: UIViewController {
             
         } onError: { error in
             print(error.localizedDescription)
+        output.modelsObservable.bind(to: tableView.rx.items(cellIdentifier: GithubTableViewCell.className, cellType: GithubTableViewCell.self)) {[weak self] _, element, cell in
+            guard let self = self else { return }
+            cell.configure(githubModel: element)
             
         }.disposed(by: disposeBag)
     }
