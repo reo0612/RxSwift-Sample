@@ -12,8 +12,6 @@ protocol GithubViewModelInput {
 
 // 出力に関するプロトコル
 protocol GithubViewModelOutput {
-    var changeModelsObservable: Observable<Void> { get }
-    var models: [GithubModel] { get }
     var modelsObservable: Observable<[GithubModel]> { get }
 }
 
@@ -38,14 +36,9 @@ final class GithubViewModel: GithubViewModelInput, GithubViewModelOutput, HasDis
     // outputについての記述
     // 出力側の定型文
     // 結果をVCに返すのでObservableを使用する
-    private let _changeModelsObservable = PublishRelay<Void>()
     // Observableを代入し変数changeModelsObservableを初期化する
-    lazy var changeModelsObservable = _changeModelsObservable.asObservable()
     private let _modelsObservable = PublishRelay<[GithubModel]>()
     lazy var modelsObservable = _modelsObservable.asObservable()
-    
-    // 最後に取得したデータ
-    var models: [GithubModel] = []
     
     // 初期化時
     init() {
@@ -72,12 +65,5 @@ final class GithubViewModel: GithubViewModelInput, GithubViewModelOutput, HasDis
         // Observableのイベントの要素を別の値に変換する(ここではModelにしている？)
         // 用途:
         // すべてのイベントに対して処理を適応したい場合
-                
-        }).map { [weak self] models in
-            // 最後に得たデータを保存する
-            self?.models = models
-            // 値が更新したことを告げるためだけのストリームを流すのでVoidにする
-            return
-        }.bind(to: _changeModelsObservable).disposed(by: disposeBag)
     }
 }

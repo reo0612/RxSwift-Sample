@@ -20,11 +20,9 @@ final class Practice1ViewController: UIViewController {
     private let githubViewModel = GithubViewModel()
     private lazy var input: GithubViewModelInput = githubViewModel
     private lazy var output: GithubViewModelOutput = githubViewModel
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
         
         bindInputStream()
         bindOutputStream()
@@ -49,12 +47,6 @@ final class Practice1ViewController: UIViewController {
     }
     
     private func bindOutputStream() {
-        output.changeModelsObservable.observe(on: MainScheduler.instance).subscribe { _ in
-                // observe(on: MainScheduler.instance)を使用してメインスレッドで処理する
-                self.tableView.reloadData()
-            
-        } onError: { error in
-            print(error.localizedDescription)
         output.modelsObservable.bind(to: tableView.rx.items(cellIdentifier: GithubTableViewCell.className, cellType: GithubTableViewCell.self)) {[weak self] _, element, cell in
             guard let self = self else { return }
             cell.configure(githubModel: element)
@@ -68,26 +60,4 @@ final class Practice1ViewController: UIViewController {
         }.disposed(by: disposeBag)
     }
     
-}
-
-extension PracticeViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        let model = output.models[indexPath.row]
-        Router.showWeb(from: self, url: URL(string: model.htmlUrl)!)
-    }
-}
-
-extension PracticeViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        output.models.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: GithubTableViewCell.className, for: indexPath) as! GithubTableViewCell
-        let githubModel = output.models[indexPath.row]
-        cell.configure(githubModel: githubModel)
-        return cell
-    }
-
 }
